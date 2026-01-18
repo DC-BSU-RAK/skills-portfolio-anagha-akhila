@@ -19,12 +19,12 @@ class JokeMaster3000:
         self.root.geometry("940x788")
         self.root.resizable(False, False)
 
-        # --- UPDATED COLOR PALETTE ---
+        # --- COLORS ---
         self.bg_pink = "#FFD1DC"  
-        self.color_title = "#454075"    # Your new indigo color
+        self.color_title = "#454075"    
         self.color_setup = "#000000"    
-        self.color_punch = "#32CD32"    # Lime Green
-        self.color_accent = "#FF1493"   # Deep Pink
+        self.color_punch = "#32CD32"    
+        self.color_accent = "#FF1493"   
         self.c_blue = "#5CE1E6"
         self.c_red = "#FF5757"
         self.c_yellow = "#FFDE59"
@@ -64,7 +64,7 @@ class JokeMaster3000:
 
     def main_menu(self):
         self.clear()
-        # Updated Title Color to #454075
+        
         tk.Label(self.root, text="JOKEMASTER3000", font=("Comic Sans MS", 60, "bold"), 
                  fg=self.color_title, bg=self.bg_pink).pack(pady=(220, 10))
         
@@ -83,7 +83,7 @@ class JokeMaster3000:
         self.clear()
         setup, self.punch = random.choice(self.jokes)
 
-        # Updated sub-header to match title color
+        
         tk.Label(self.root, text="READY FOR A LAUGH?", font=("Comic Sans MS", 14, "bold"), 
                  fg=self.color_title, bg=self.bg_pink).pack(pady=(200, 10))
         
@@ -112,7 +112,7 @@ class JokeMaster3000:
         tk.Button(self.root, text="NEXT JOKE ➜", font=("Comic Sans MS", 12, "bold"), 
                   bg=self.c_yellow, fg="black", width=20, bd=0, command=self.next_joke).pack(pady=10)
 
-        # Updated to match title color
+        
         tk.Button(self.root, text="BACK TO MENU", font=("Comic Sans MS", 10, "bold"), 
                   bg=self.bg_pink, fg=self.color_title, bd=0, command=self.main_menu).pack(pady=15)
 
